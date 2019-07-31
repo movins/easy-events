@@ -1,2 +1,1 @@
-# easy_events
-easy events
+# Event Bus
