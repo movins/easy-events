@@ -1,4 +1,4 @@
-import 'package:event_bus/base_event.dart';
+import 'package:easy_events/base_event.dart';
 
 enum Priority {
   LOW, // 低

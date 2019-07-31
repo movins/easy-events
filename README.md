@@ -1,1 +1,1 @@
-# Event Bus
+# easy events
