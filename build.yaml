@@ -1,0 +1,29 @@
+# Read about `build.yaml` at https://pub.dartlang.org/packages/build_config
+targets:
+  $default:
+    builders:
+      easy_events|module_builder:
+        enabled: true
+        generate_for:
+          exclude: ['**.internal.dart']
+      easy_events|module_write_builder:
+        enabled: true
+        options: { 'write': true }
+        generate_for:
+          exclude: ['**.internal.dart']
+
+builders:
+  module_write_builder:
+    import: 'package:easy_events/builder/builder.dart'
+    builder_factories: ['moduleWriteBuilder']
+    build_extensions: { '.module.dart': ['.internal.dart'] }
+    auto_apply: root_package
+    build_to: source
+
+  module_builder:
+    import: 'package:easy_events/builder/builder.dart'
+    builder_factories: ['moduleBuilder']
+    build_extensions: { '.dart': ['.internal_invalid.dart'] }
+    auto_apply: root_package
+    runs_before: ['easy_events|module_write_builder']
+    build_to: source

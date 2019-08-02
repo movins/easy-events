@@ -1,4 +1,4 @@
-import 'package:easy_events/easy_events.dart';
+import 'package:easy_events/index.dart';
 import 'package:test/test.dart';
 
 class TestEvent extends BaseEvent {
