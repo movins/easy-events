@@ -24,7 +24,7 @@ class DispImpl implements Dispatch {
     EventCenter.off(_uuid, key, this, handler, priority);
   }
 
-  void doEvent(String key, Object param) {
+  void event(String key, Object param) {
     emit(key, new BaseEvent(key, param));
   }
 
