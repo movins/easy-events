@@ -1,8 +1,6 @@
-import 'package:easy_events/json_data.dart';
-
 class BaseEvent {
   String type;
-  JsonData eventData;
+  Object eventData;
 
-  BaseEvent(this.type, [ this.eventData = null ]);
+  BaseEvent(this.type, [this.eventData = null]);
 }
