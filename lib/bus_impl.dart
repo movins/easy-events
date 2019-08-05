@@ -21,7 +21,7 @@ class BusImpl<T> extends IBase {
 
   void init() {}
 
-  void destroy() {
+  void dispose() {
     _streamController.close();
   }
 

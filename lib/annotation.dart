@@ -33,7 +33,7 @@ abstract class IBase {
   String get uuid => _uuid;
 
   void init();
-  void destroy();
+  void dispose();
   void start();
   void stop();
 }

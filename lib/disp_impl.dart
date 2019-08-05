@@ -29,7 +29,7 @@ class DispImpl extends IBase implements Dispatch {
 
   void init() {}
 
-  void destroy() {
+  void dispose() {
     stop();
     clear();
   }
